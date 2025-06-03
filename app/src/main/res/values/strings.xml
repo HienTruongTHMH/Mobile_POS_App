@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coffee App</string>
+    <string name="greeting">Xin chào, Nguyễn Văn A</string>
+    <string name="employee">Nhan Vien</string>
+    <string name="search_hint">Tìm kiếm...</string>
+    <string name="ready_to_serve">Ready to serve</string>
+    <string name="preparing">Preparing</string>
+    <string name="orders_count">3 orders</string>
+    <string name="inside_table">Inside, table 2</string>
+    <string name="outside_chair">Outside, chair 1</string>
+    <string name="coffee_category">Cà phê</string>
+    <string name="order_tab">Order</string>
+    <string name="list_tab">List</string>
+    <string name="package_tab">Package</string>
+    <string name="cart_tab">Cart</string>
+    <string name="profile_tab">Profile</string>
+    <string name="size_small">S</string>
+    <string name="size_medium">M</string>
+    <string name="size_large">L</string>
+    <string name="cappuccino">Cappuccino</string>
+    <string name="espresso">Espresso</string>
+    <string name="americano">Americano</string>
+    <string name="latte">Latte</string>
+    <string name="add_to_cart">Added %s to cart</string>
+    <string name="add_to_favorites">Added to favorites</string>
+    <string name="remove_from_favorites">Removed from favorites</string>
+    <string name="selected_size">Selected size: %s</string>
+</resources>
