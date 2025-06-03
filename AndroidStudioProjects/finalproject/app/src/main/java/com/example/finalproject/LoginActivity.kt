@@ -2,39 +2,38 @@ package com.example.finalproject
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.*
+import android.view.View
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var etUsername: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var btnFacebook: ImageButton
+    private lateinit var btnGmail: ImageButton
+    private lateinit var tvSignUp: TextView
+    private lateinit var tvForgotPassword: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val etUsername = findViewById<EditText>(R.id.etUsername)
-        val etPassword = findViewById<EditText>(R.id.etPassword)
-        val btnFacebook = findViewById<ImageButton>(R.id.btnFacebookLogin)
-        val btnGmail = findViewById<ImageButton>(R.id.btnGmailLogin)
-        val tvSignUp = findViewById<TextView>(R.id.tvSignUp)
-        val tvForgotPassword = findViewById<TextView>(R.id.tvForgotPassword)
-
-        // Nút Login nếu có (bạn tự thêm vào XML nếu cần)
-        // val btnLogin = findViewById<Button>(R.id.btnLogin)
+        etUsername = findViewById(R.id.etUsername)
+        etPassword = findViewById(R.id.etPassword)
+        btnFacebook = findViewById(R.id.btnFacebookLogin)
+        btnGmail = findViewById(R.id.btnGmailLogin)
+        tvSignUp = findViewById(R.id.tvSignUp)
+        tvForgotPassword = findViewById(R.id.tvForgotPassword)
 
         tvSignUp.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
-        btnFacebook.setOnClickListener {
-            Toast.makeText(this, "Login with Facebook clicked", Toast.LENGTH_SHORT).show()
-        }
-
-        btnGmail.setOnClickListener {
-            Toast.makeText(this, "Login with Gmail clicked", Toast.LENGTH_SHORT).show()
-        }
-
-        tvForgotPassword.setOnClickListener {
-            Toast.makeText(this, "Forgot password clicked", Toast.LENGTH_SHORT).show()
-        }
+        // Nếu muốn thêm sự kiện cho btnFacebook hoặc btnGmail thì thêm ở đây
+        // btnFacebook.setOnClickListener { ... }
+        // btnGmail.setOnClickListener { ... }
     }
 }

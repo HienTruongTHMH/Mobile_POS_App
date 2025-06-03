@@ -7,17 +7,25 @@ import androidx.appcompat.app.AppCompatActivity
 
 class RegisterActivity : AppCompatActivity() {
 
+    private lateinit var etUsername: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var etVerifyPassword: EditText
+    private lateinit var btnConfirm: Button
+    private lateinit var btnFacebook: ImageView
+    private lateinit var btnGmail: ImageView
+    private lateinit var tvLoginIn: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val etUsername = findViewById<EditText>(R.id.etRegUsername)
-        val etPassword = findViewById<EditText>(R.id.etRegPassword)
-        val etVerifyPassword = findViewById<EditText>(R.id.etVerifyPassword)
-        val btnConfirm = findViewById<Button>(R.id.btnConfirmRegister)
-        val btnFacebook = findViewById<ImageView>(R.id.btnFacebookRegister)
-        val btnGmail = findViewById<ImageView>(R.id.btnGmailRegister)
-        val tvLoginIn = findViewById<TextView>(R.id.tvLoginIn)
+        etUsername = findViewById(R.id.etRegUsername)
+        etPassword = findViewById(R.id.etRegPassword)
+        etVerifyPassword = findViewById(R.id.etVerifyPassword)
+        btnConfirm = findViewById(R.id.btnConfirmRegister)
+        btnFacebook = findViewById(R.id.btnFacebookRegister)
+        btnGmail = findViewById(R.id.btnGmailRegister)
+        tvLoginIn = findViewById(R.id.tvLoginIn)
 
         btnConfirm.setOnClickListener {
             val username = etUsername.text.toString().trim()
